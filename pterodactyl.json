@@ -30,7 +30,7 @@
 	},
 	"scripts": {
 		"installation": {
-			"script": "#!\/bin\/bash\r\n\r\nset -e\r\nexport DEBIAN_FRONTEND=\"noninteractive\"\r\n\r\napt-get update\r\napt-get install -y --no-install-recommends libgles1 libx11-6 zlib1g libfreeimage3 libglfw3 xinput libxfixes3 gosu tk unzip wget\r\napt clean && apt clean && rm -rf \/var\/lib\/apt\/lists\/*\r\n\r\nmkdir -p \/home\/$USER\/.minecraft-pi && chmod -R a+rw \/home\r\nmkdir -p \/app\/minecraft-pi\r\n\r\ncd \/app\/minecraft-pi\r\n\r\nwget https:\/\/github.com\/MCPI-Revival\/mcpi-packages\/blob\/main\/ptero-server.zip?raw=true -O mcpi.zip\r\nunzip mcpi.zip && rm mcpi.zip\r\nchmod a+x .\/run.sh\r\n",
+			"script": "#!\/bin\/bash\r\n\r\nset -e\r\nexport DEBIAN_FRONTEND=\"noninteractive\"\r\n\r\napt-get update\r\napt-get install -y --no-install-recommends libgles1 libx11-6 zlib1g libfreeimage3 libglfw3 xinput libxfixes3 gosu tk unzip wget ca-certificates\r\napt clean && apt clean && rm -rf \/var\/lib\/apt\/lists\/*\r\n\r\nmkdir -p \/home\/$USER\/.minecraft-pi && chmod -R a+rw \/home\r\nmkdir -p \/app\/minecraft-pi\r\n\r\ncd \/app\/minecraft-pi\r\n\r\nwget https:\/\/github.com\/MCPI-Revival\/mcpi-packages\/blob\/main\/ptero-server.zip?raw=true -O mcpi.zip\r\nunzip mcpi.zip && rm mcpi.zip\r\nchmod a+x .\/run.sh\r\n",
 			"container": "debian:bullseye",
 			"entrypoint": "bash"
 		}
