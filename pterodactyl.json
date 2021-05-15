@@ -1,4 +1,8 @@
 {
+	"meta": {
+		"version": "PTDL_v1",
+		"update_url": null
+	},
 	"name": "MCPI-Reborn",
 	"author": "donfrutosgomez@gmail.com",
 	"description": "Minecraft Pi Reborn server",
